@@ -1,4 +1,4 @@
-import { Image, Modal, Pagination, useMantineTheme } from "@mantine/core";
+import {Image, MantineTheme, Modal, Pagination, useMantineTheme} from "@mantine/core";
 import { motion } from "framer-motion";
 import React, { FC, useState } from "react";
 
@@ -6,11 +6,28 @@ import styles from "./product.module.scss";
 import { IProductProps } from "./product.props";
 import { Button, Input, PageTitle } from "../../components";
 
+const products = [
+  { title: "Бройлер кобб 500 / росс 308", id: 1, category: "Цыплята 1-3 дня", images: "https://kvedomosti.ru/wp-content/uploads/2016/12/Kak-kupit-tsyplyat-brojlerov.jpeg"},
+  { title: "Бройлер кобб 500", id: 2, category: "Яйцо кобб 500", images: "https://img.promportal.su/foto/good_fotos/465/4651720/prodayu-inkubacionnie-yayca-broylerov-kobb-500-i-ross-308_foto_largest.jpg"},
+  { title: "Бройлер", id: 3, category: "Двухнедельные цыплятая", images: "https://ferma.expert/wp-content/uploads/2018/06/boyler.jpg"},
+  { title: "Бройлер росс 308", id: 4, category: "Яйцо росс 308", images: "https://76.img.avito.st/image/1/1.7SERyba5QcgnYIPNR_rgS_FqR8Kl6kkKoGpDzK1gS8o.EBAbQQKF_8P6wkBrsNqzv4pH0PXPCdOSYgdqj8sP8C4"},
+  { title: "Мясо Росс 308 / Кобб 500", id: 5, category: "Мясо", images: "https://rassvetagro.ru/wp-content/uploads/2020/07/kurica-tushka.jpg"},
+]
 export const Product: FC<IProductProps> = () => {
   const [openModal, setOpenModal] = useState(false);
   const theme = useMantineTheme();
 
   const handleOpenModalClick = () => setOpenModal(true);
+
+  const paginationStyle = {
+      item: {
+          "&[data-active]": {
+              backgroundColor: "hsl(353, 100%, 65%)",
+          },
+          marginTop: 20,
+          marginBottom: 20,
+      },
+  }
   return (
     <motion.section initial={{ width: "calc(100vw + 100%)" }} animate={{ width: "100%" }}>
       <Modal
@@ -40,94 +57,28 @@ export const Product: FC<IProductProps> = () => {
         </div>
       </div>
       <div className={styles.product_grid}>
-        <div className={styles.product_card}>
-          <div className={styles.product_thumbnail}>
-            <Image
-              src="https://kvedomosti.ru/wp-content/uploads/2016/12/Kak-kupit-tsyplyat-brojlerov.jpeg"
-              alt=""
-              className={styles.product_img}
-            />
-            <div className={styles.product_mask}></div>
-          </div>
-          <span className={styles.product_category}>Цыплята 1-3 дня</span>
-          <h3 className={styles.product_title}>Бройлер кобб 500 / росс 308</h3>
-          <a onClick={handleOpenModalClick} className={styles.product_button}>
-            <i className="icon-basket" />
-          </a>
-        </div>
-        <div className={styles.product_card}>
-          <div className={styles.product_thumbnail}>
-            <Image
-              src="https://img.promportal.su/foto/good_fotos/465/4651720/prodayu-inkubacionnie-yayca-broylerov-kobb-500-i-ross-308_foto_largest.jpg"
-              alt=""
-              className={styles.product_img}
-            />
-            <div className={styles.product_mask}></div>
-          </div>
-          <span className={styles.product_category}>Яйцо кобб 500</span>
-          <h3 className={styles.product_title}>Бройлер кобб 500</h3>
-          <a onClick={handleOpenModalClick} className={styles.product_button}>
-            <i className="icon-link" />
-          </a>
-        </div>
-        <div className={styles.product_card}>
-          <div className={styles.product_thumbnail}>
-            <Image
-              src="https://ferma.expert/wp-content/uploads/2018/06/boyler.jpg"
-              alt=""
-              className={styles.product_img}
-            />
-            <div className={styles.product_mask}></div>
-          </div>
-          <span className={styles.product_category}>Двухнедельные цыплятая</span>
-          <h3 className={styles.product_title}>Бройлер кобб 500</h3>
-          <a onClick={handleOpenModalClick} className={styles.product_button}>
-            <i className="icon-link" />
-          </a>
-        </div>
-        <div className={styles.product_card}>
-          <div className={styles.product_thumbnail}>
-            <Image
-              src="https://76.img.avito.st/image/1/1.7SERyba5QcgnYIPNR_rgS_FqR8Kl6kkKoGpDzK1gS8o.EBAbQQKF_8P6wkBrsNqzv4pH0PXPCdOSYgdqj8sP8C4"
-              alt=""
-              className={styles.product_img}
-            />
-            <div className={styles.product_mask}></div>
-          </div>
-          <span className={styles.product_category}>Яйцо росс 308</span>
-          <h3 className={styles.product_title}>Бройлер Росс 308</h3>
-          <a onClick={handleOpenModalClick} className={styles.product_button}>
-            <i className="icon-link" />
-          </a>
-        </div>
-        <div className={styles.product_card}>
-          <div className={styles.product_thumbnail}>
-            <Image
-              src="https://rassvetagro.ru/wp-content/uploads/2020/07/kurica-tushka.jpg"
-              alt=""
-              className={styles.product_img}
-            />
-            <div className={styles.product_mask}></div>
-          </div>
-          <span className={styles.product_category}>Мясо</span>
-          <h3 className={styles.product_title}>Мясо Росс 308 / Кобб 500</h3>
-          <a onClick={handleOpenModalClick} className={styles.product_button}>
-            <i className="icon-link" />
-          </a>
-        </div>
+        {products.map((product) => (
+            <div className={styles.product_card} key={product.id}>
+              <div className={styles.product_thumbnail}>
+                <Image
+                    src={product.images}
+                    alt=""
+                    className={styles.product_img}
+                />
+                <div className={styles.product_mask}></div>
+              </div>
+              <span className={styles.product_category}>{product.category}</span>
+              <h3 className={styles.product_title}>{product.title}</h3>
+              <a onClick={handleOpenModalClick} className={styles.product_button}>
+                <i className="icon-basket" />
+              </a>
+            </div>
+        ) )}
       </div>
       <Pagination
         className={styles.pagination}
         size="xs"
-        styles={(theme) => ({
-          item: {
-            "&[data-active]": {
-              backgroundColor: "hsl(353, 100%, 65%)",
-            },
-            marginTop: 20,
-            marginBottom: 20,
-          },
-        })}
+        styles={paginationStyle}
         total={100}
       />
     </motion.section>
