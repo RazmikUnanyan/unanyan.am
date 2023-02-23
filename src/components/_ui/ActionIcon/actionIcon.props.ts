@@ -1,5 +1,6 @@
-import {ButtonHTMLAttributes, DetailedHTMLProps, ReactNode} from "react";
+import { ReactNode } from "react";
+import { LinkProps } from "react-router-dom";
 
-export interface IButtonProps extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
-    children: ReactNode
+export interface IActionIconProps extends LinkProps {
+  children: ReactNode;
 }

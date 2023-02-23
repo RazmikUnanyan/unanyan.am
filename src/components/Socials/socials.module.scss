@@ -1,17 +1,9 @@
-.title {
-  font-size: $fs-h1;
-  font-weight: $fw-bold;
-  margin-left: 0.875rem;
-  position: relative;
-  margin-bottom: 3.75rem;
-}
+@use "../../styles/abstracts" as *;
 
-.title::before {
-  content: "";
-  background: url("../../assets/dots-bg.svg");
-  width: 2.25rem;
-  height: 2.25rem;
-  position: absolute;
-  left: -0.875rem;
-  top: -0.875rem;
+.socials {
+  display: flex;
+  justify-content: center;
+  column-gap: 1.75rem;
+  margin: 1.5rem 0;
+  z-index: 11;
 }
