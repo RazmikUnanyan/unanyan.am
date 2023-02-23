@@ -3,9 +3,12 @@ import React, { FC } from "react";
 import styles from "./sidebar.module.scss";
 import { ISidebarProps } from "./sidebar.props";
 import Logo from "../../assets/avatar.png";
-import { ActionIcon } from "../../components";
+import {NavLink} from "react-router-dom";
 
 export const Sidebar: FC<ISidebarProps> = () => {
+    const active = ({isActive}: {isActive: boolean}) => ({
+        color: isActive ? "hsl(43, 100%, 68%)" : "hsl(244, 24%, 26%)"
+    })
   return (
     <aside className={styles.aside}>
       <a href="#" className={styles.logo}>
@@ -16,21 +19,21 @@ export const Sidebar: FC<ISidebarProps> = () => {
         <div className={styles.nav_menu}>
           <ul className={styles.nav_list}>
             <li className={styles.nav_item}>
-              <ActionIcon to="/" className={styles.nav_link}>
+              <NavLink to="/unanyan.am" className={styles.nav_link} style={active}>
                 <i className="icon-home"></i>
-              </ActionIcon>
+              </NavLink>
             </li>
 
-            <li className={styles.nav_item}>
-              <ActionIcon to="/product" className={styles.nav_link}>
+            <li className={styles.nav_item} >
+              <NavLink   to="/product" className={styles.nav_link}  style={active}>
                 <i className="icon-fire"></i>
-              </ActionIcon>
+              </NavLink>
             </li>
 
             <li className={styles.nav_item}>
-              <ActionIcon to="/contact" className={styles.nav_link}>
+              <NavLink to="/contact" className={styles.nav_link} style={active}>
                 <i className="icon-envelope"></i>
-              </ActionIcon>
+              </NavLink>
             </li>
           </ul>
         </div>

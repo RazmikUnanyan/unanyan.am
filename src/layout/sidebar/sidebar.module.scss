@@ -27,6 +27,14 @@
   font-weight: $fw-bold;
 }
 
+.nav_link:hover {
+  color: $cl-secondary;
+}
+
+.nav_link a.active {
+  color: red;
+}
+
 .copyright {
   color: hsl(245, 15%, 65%);
   font-size: $fs-secondary;

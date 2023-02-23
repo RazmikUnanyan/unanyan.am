@@ -20,7 +20,7 @@ export const Home: FC<IHomeProps> = () => {
           Продажа: <Typical steps={steps} loop={Infinity} wrapper="span" />
         </span>
         <Socials />
-        <Button onClick={() => navigate("product")}>В магазин</Button>
+        <Button onClick={() => navigate("/product")}>В магазин</Button>
       </div>
       <Shapes />
     </motion.section>
