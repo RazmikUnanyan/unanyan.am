@@ -4,7 +4,7 @@ import React, { FC } from "react";
 
 import styles from "./contacts.module.scss";
 import { IContactsProps } from "./contacts.props";
-import { Button, PageTitle, Shapes } from "../../components";
+import { Button, Input, PageTitle, Shapes, Textarea } from "../../components";
 
 export const Contacts: FC<IContactsProps> = () => {
   return (
@@ -18,23 +18,17 @@ export const Contacts: FC<IContactsProps> = () => {
         <form action="" className={styles.contacts_form}>
           <div className={styles.contacts_form_group}>
             <div className={styles.contacts_form_input_wrapper}>
-              <input className={styles.contacts_form_input} type="text" placeholder="Введите ваш имя" />
+              <Input type="text" placeholder="Введите ваш имя" />
             </div>
             <div className={styles.contacts_form_input_wrapper}>
-              <input className={styles.contacts_form_input} type="text" placeholder="Введите ваш email" />
+              <Input type="text" placeholder="Введите ваш email" />
             </div>
           </div>
           <div className={styles.contacts_form_input_wrapper}>
-            <input className={styles.contacts_form_input} type="text" placeholder="Тема" />
+            <Input type="text" placeholder="Тема" />
           </div>
           <div className={cn(styles.contacts_form_input_wrapper, styles.contacts_form_input_area)}>
-            <textarea
-              className={styles.contacts_form_input}
-              placeholder="Напишите ваш текст"
-              name=""
-              id=""
-              rows={30}
-              cols={10}></textarea>
+            <Textarea placeholder="Напишите ваш текст" name="" id="" rows={30} cols={10}></Textarea>
           </div>
           <Button>Отправить</Button>
         </form>

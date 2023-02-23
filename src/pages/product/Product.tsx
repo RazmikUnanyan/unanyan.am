@@ -1,10 +1,10 @@
-import {Image, Modal, useMantineTheme} from "@mantine/core";
+import { Image, Modal, Pagination, useMantineTheme } from "@mantine/core";
 import { motion } from "framer-motion";
 import React, { FC, useState } from "react";
 
 import styles from "./product.module.scss";
 import { IProductProps } from "./product.props";
-import { PageTitle } from "../../components";
+import { Button, Input, PageTitle } from "../../components";
 
 export const Product: FC<IProductProps> = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -22,13 +22,23 @@ export const Product: FC<IProductProps> = () => {
         overlayBlur={3}
         size="xl">
         <h2>Бройлера Кобб 500</h2>
-        {/*<img*/}
-        {/*  src="https://76.img.avito.st/image/1/1.7SERyba5QcgnYIPNR_rgS_FqR8Kl6kkKoGpDzK1gS8o.EBAbQQKF_8P6wkBrsNqzv4pH0PXPCdOSYgdqj8sP8C4"*/}
-        {/*  alt=""*/}
-        {/*  className={styles.modal_img}*/}
-        {/*/>*/}
       </Modal>
-      <PageTitle>Магазин</PageTitle>
+      <div className={styles.product_header}>
+        <div className={styles.product_name}>
+          <PageTitle>Магазин</PageTitle>
+        </div>
+        <div className={styles.filter_wrapper}>
+          <div className={styles.input_wrapper}>
+            <div className={styles.search_icon_wrapper}>
+              <i className="icon-magnifier" />
+            </div>
+            <Input type="text" placeholder="Поиск" />
+          </div>
+          <Button>
+            <i className="icon-equalizer" />
+          </Button>
+        </div>
+      </div>
       <div className={styles.product_grid}>
         <div className={styles.product_card}>
           <div className={styles.product_thumbnail}>
@@ -42,7 +52,7 @@ export const Product: FC<IProductProps> = () => {
           <span className={styles.product_category}>Цыплята 1-3 дня</span>
           <h3 className={styles.product_title}>Бройлер кобб 500 / росс 308</h3>
           <a onClick={handleOpenModalClick} className={styles.product_button}>
-            <i className="icon-link" />
+            <i className="icon-basket" />
           </a>
         </div>
         <div className={styles.product_card}>
@@ -106,6 +116,20 @@ export const Product: FC<IProductProps> = () => {
           </a>
         </div>
       </div>
+      <Pagination
+        className={styles.pagination}
+        size="xs"
+        styles={(theme) => ({
+          item: {
+            "&[data-active]": {
+              backgroundColor: "hsl(353, 100%, 65%)",
+            },
+            marginTop: 20,
+            marginBottom: 20,
+          },
+        })}
+        total={100}
+      />
     </motion.section>
   );
 };
