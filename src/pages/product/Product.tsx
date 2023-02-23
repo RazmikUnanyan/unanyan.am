@@ -1,4 +1,4 @@
-import { Modal, useMantineTheme } from "@mantine/core";
+import {Image, Modal, useMantineTheme} from "@mantine/core";
 import { motion } from "framer-motion";
 import React, { FC, useState } from "react";
 
@@ -32,7 +32,7 @@ export const Product: FC<IProductProps> = () => {
       <div className={styles.product_grid}>
         <div className={styles.product_card}>
           <div className={styles.product_thumbnail}>
-            <img
+            <Image
               src="https://kvedomosti.ru/wp-content/uploads/2016/12/Kak-kupit-tsyplyat-brojlerov.jpeg"
               alt=""
               className={styles.product_img}
@@ -47,7 +47,7 @@ export const Product: FC<IProductProps> = () => {
         </div>
         <div className={styles.product_card}>
           <div className={styles.product_thumbnail}>
-            <img
+            <Image
               src="https://img.promportal.su/foto/good_fotos/465/4651720/prodayu-inkubacionnie-yayca-broylerov-kobb-500-i-ross-308_foto_largest.jpg"
               alt=""
               className={styles.product_img}
@@ -62,8 +62,8 @@ export const Product: FC<IProductProps> = () => {
         </div>
         <div className={styles.product_card}>
           <div className={styles.product_thumbnail}>
-            <img
-              src="https://fermoved.ru/wp-content/uploads/2017/07/brojlery-kobb500.jpg"
+            <Image
+              src="https://rynok-apk.ru/preview/original/pic/96037_F_broilers.jpg"
               alt=""
               className={styles.product_img}
             />
@@ -77,7 +77,7 @@ export const Product: FC<IProductProps> = () => {
         </div>
         <div className={styles.product_card}>
           <div className={styles.product_thumbnail}>
-            <img
+            <Image
               src="https://76.img.avito.st/image/1/1.7SERyba5QcgnYIPNR_rgS_FqR8Kl6kkKoGpDzK1gS8o.EBAbQQKF_8P6wkBrsNqzv4pH0PXPCdOSYgdqj8sP8C4"
               alt=""
               className={styles.product_img}
@@ -92,7 +92,7 @@ export const Product: FC<IProductProps> = () => {
         </div>
         <div className={styles.product_card}>
           <div className={styles.product_thumbnail}>
-            <img
+            <Image
               src="https://rassvetagro.ru/wp-content/uploads/2020/07/kurica-tushka.jpg"
               alt=""
               className={styles.product_img}

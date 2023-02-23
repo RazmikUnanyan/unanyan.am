@@ -13,3 +13,9 @@
 .socials_link a:active {
   color: $cl-secondary;
 }
+
+@media screen and (max-width: 1024px) {
+  .socials_link{
+    font-size: 1.125rem;
+  }
+}

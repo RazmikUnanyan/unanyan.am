@@ -13,6 +13,7 @@
   flex-direction: column;
   justify-content: space-between;
   z-index: 10;
+  transition: .3s;
 }
 
 .nav_list {
@@ -40,4 +41,38 @@
   font-size: $fs-secondary;
   transform: rotate(-180deg);
   writing-mode: vertical-rl;
+}
+
+.nav_toggle {
+  position: fixed;
+  top: 1.25rem;
+  left: 1.875rem;
+  height: 40px;
+  width: 45px;
+  border: 1px solid $cl-brown;
+  background-color: $cl-body;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  transition: .3s;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .aside{
+    left: -110px;
+  }
+
+  .nav_toggle {
+    display: flex;
+  }
+
+  .nav_toggle_open {
+    left: 9rem;
+  }
+
+  .aside_mobile_open {
+    left: 0;
+  }
 }

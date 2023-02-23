@@ -5,6 +5,7 @@
   width: 100%;
   height: 100%;
   opacity: 0.5;
+  z-index: -11;
 }
 
 .s1 {
@@ -96,5 +97,5 @@
 .s16 {
   position: absolute;
   right: 10rem;
-  bottom: 50%;
+  bottom: 70%;
 }
