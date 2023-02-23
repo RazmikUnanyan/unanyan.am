@@ -73,7 +73,7 @@ export const Product: FC<IProductProps> = () => {
         <div className={styles.product_card}>
           <div className={styles.product_thumbnail}>
             <Image
-              src="https://rynok-apk.ru/preview/original/pic/96037_F_broilers.jpg"
+              src="https://ferma.expert/wp-content/uploads/2018/06/boyler.jpg"
               alt=""
               className={styles.product_img}
             />
