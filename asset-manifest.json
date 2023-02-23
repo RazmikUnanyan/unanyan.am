@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/RazmikUnanyan/unanyan.am/static/css/main.956d40b6.css",
-    "main.js": "/RazmikUnanyan/unanyan.am/static/js/main.3999ad54.js",
-    "static/media/avatar.png": "/RazmikUnanyan/unanyan.am/static/media/avatar.cc5ea4091c26bcbbdb8b.png",
-    "static/media/chicken4.svg": "/RazmikUnanyan/unanyan.am/static/media/chicken4.dbb7f5cf2acf91b3b80accfee1916a7a.svg",
-    "static/media/chicken1.svg": "/RazmikUnanyan/unanyan.am/static/media/chicken1.571943ae34a9a5f78f40dd6d92f9cc06.svg",
-    "static/media/chicken3.svg": "/RazmikUnanyan/unanyan.am/static/media/chicken3.8223566fa3fce4ebcc59c8bf55063440.svg",
-    "static/media/chicken2.svg": "/RazmikUnanyan/unanyan.am/static/media/chicken2.6162589031f2ced66a1b9df753d6c6b3.svg",
-    "static/media/dots-bg.svg": "/RazmikUnanyan/unanyan.am/static/media/dots-bg.aa8289c51cd678b8cd47.svg",
-    "index.html": "/RazmikUnanyan/unanyan.am/index.html",
-    "main.956d40b6.css.map": "/RazmikUnanyan/unanyan.am/static/css/main.956d40b6.css.map",
-    "main.3999ad54.js.map": "/RazmikUnanyan/unanyan.am/static/js/main.3999ad54.js.map"
+    "main.css": "/unanyan.am/static/css/main.53596606.css",
+    "main.js": "/unanyan.am/static/js/main.73ee5401.js",
+    "static/media/avatar.png": "/unanyan.am/static/media/avatar.cc5ea4091c26bcbbdb8b.png",
+    "static/media/chicken4.svg": "/unanyan.am/static/media/chicken4.dbb7f5cf2acf91b3b80accfee1916a7a.svg",
+    "static/media/chicken1.svg": "/unanyan.am/static/media/chicken1.571943ae34a9a5f78f40dd6d92f9cc06.svg",
+    "static/media/chicken3.svg": "/unanyan.am/static/media/chicken3.8223566fa3fce4ebcc59c8bf55063440.svg",
+    "static/media/chicken2.svg": "/unanyan.am/static/media/chicken2.6162589031f2ced66a1b9df753d6c6b3.svg",
+    "static/media/dots-bg.svg": "/unanyan.am/static/media/dots-bg.aa8289c51cd678b8cd47.svg",
+    "index.html": "/unanyan.am/index.html",
+    "main.53596606.css.map": "/unanyan.am/static/css/main.53596606.css.map",
+    "main.73ee5401.js.map": "/unanyan.am/static/js/main.73ee5401.js.map"
   },
   "entrypoints": [
-    "static/css/main.956d40b6.css",
-    "static/js/main.3999ad54.js"
+    "static/css/main.53596606.css",
+    "static/js/main.73ee5401.js"
   ]
 }
