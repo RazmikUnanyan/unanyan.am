@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/unanyan.am/static/css/main.3e968773.css",
-    "main.js": "/unanyan.am/static/js/main.54bb50ed.js",
+    "main.css": "/unanyan.am/static/css/main.ee859b82.css",
+    "main.js": "/unanyan.am/static/js/main.72a3c5bd.js",
     "static/media/avatar.png": "/unanyan.am/static/media/avatar.cc5ea4091c26bcbbdb8b.png",
     "static/media/chicken4.svg": "/unanyan.am/static/media/chicken4.dbb7f5cf2acf91b3b80accfee1916a7a.svg",
     "static/media/chicken1.svg": "/unanyan.am/static/media/chicken1.571943ae34a9a5f78f40dd6d92f9cc06.svg",
@@ -9,11 +9,11 @@
     "static/media/chicken2.svg": "/unanyan.am/static/media/chicken2.6162589031f2ced66a1b9df753d6c6b3.svg",
     "static/media/dots-bg.svg": "/unanyan.am/static/media/dots-bg.aa8289c51cd678b8cd47.svg",
     "index.html": "/unanyan.am/index.html",
-    "main.3e968773.css.map": "/unanyan.am/static/css/main.3e968773.css.map",
-    "main.54bb50ed.js.map": "/unanyan.am/static/js/main.54bb50ed.js.map"
+    "main.ee859b82.css.map": "/unanyan.am/static/css/main.ee859b82.css.map",
+    "main.72a3c5bd.js.map": "/unanyan.am/static/js/main.72a3c5bd.js.map"
   },
   "entrypoints": [
-    "static/css/main.3e968773.css",
-    "static/js/main.54bb50ed.js"
+    "static/css/main.ee859b82.css",
+    "static/js/main.72a3c5bd.js"
   ]
 }
