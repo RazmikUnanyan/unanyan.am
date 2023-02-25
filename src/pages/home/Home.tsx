@@ -12,7 +12,10 @@ export const Home: FC<IHomeProps> = () => {
   const navigate = useNavigate();
   const steps = ["яйцо 🐣", 1000, "цыплята 🐥", 1000, "мясо 🍗", 1000];
   return (
-    <motion.section className={styles.home} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+    <motion.section className={styles.home}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+    >
       <div className={styles.intro}>
         <Avatar className={styles.home_img} />
         <h1 className={styles.home_name}>Инкубационные яйца</h1>

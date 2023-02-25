@@ -7,17 +7,18 @@ import { IProductProps } from "./product.props";
 import {Button, Detail, Input, PageTitle} from "../../components";
 
 const products = [
-  { title: "Бройлер кобб 500 / росс 308", id: 1, category: "Цыплята 1-3 дня", images: "https://kvedomosti.ru/wp-content/uploads/2016/12/Kak-kupit-tsyplyat-brojlerov.jpeg"},
-  { title: "Бройлер кобб 500", id: 2, category: "Яйцо кобб 500", images: "https://img.promportal.su/foto/good_fotos/465/4651720/prodayu-inkubacionnie-yayca-broylerov-kobb-500-i-ross-308_foto_largest.jpg"},
+  { title: "Кобб 500 / Росс 308", id: 1, category: "Цыплята 1-3 дня", images: "https://kvedomosti.ru/wp-content/uploads/2016/12/Kak-kupit-tsyplyat-brojlerov.jpeg"},
+  { title: "Kобб 500", id: 2, category: "Яйцо кобб 500", images: "https://img.promportal.su/foto/good_fotos/465/4651720/prodayu-inkubacionnie-yayca-broylerov-kobb-500-i-ross-308_foto_largest.jpg"},
   { title: "Бройлер", id: 3, category: "Двухнедельные цыплятая", images: "https://ferma.expert/wp-content/uploads/2018/06/boyler.jpg"},
-  { title: "Бройлер росс 308", id: 4, category: "Яйцо росс 308", images: "https://img.promportal.su/foto/good_fotos/465/4651720/prodayu-inkubacionnie-yayca-broylerov-kobb-500-i-ross-308_foto_largest.jpg"},
-  { title: "Мясо Росс 308 / Кобб 500", id: 5, category: "Мясо", images: "https://rassvetagro.ru/wp-content/uploads/2020/07/kurica-tushka.jpg"},
+  { title: "Росс 308", id: 4, category: "Яйцо росс 308", images: "https://img.promportal.su/foto/good_fotos/465/4651720/prodayu-inkubacionnie-yayca-broylerov-kobb-500-i-ross-308_foto_largest.jpg"},
+  { title: "Росс 308 / Кобб 500", id: 5, category: "Мясо", images: "https://rassvetagro.ru/wp-content/uploads/2020/07/kurica-tushka.jpg"},
 ]
 export const Product: FC<IProductProps> = () => {
   const [openModal, setOpenModal] = useState(false);
   const theme = useMantineTheme();
 
   const handleOpenModalClick = () => setOpenModal(true);
+  const handleCloseModalClick = () => setOpenModal(false);
 
   const paginationStyle = {
       item: {
@@ -29,16 +30,18 @@ export const Product: FC<IProductProps> = () => {
       },
   }
   return (
-    <motion.section initial={{ width: "calc(100vw + 100%)" }} animate={{ width: "100%" }}>
+    <motion.section initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+    >
       <Modal
         withCloseButton={false}
         opened={openModal}
-        onClose={() => setOpenModal(false)}
+        onClose={handleCloseModalClick}
         overlayColor={theme.colorScheme === "dark" ? theme.colors.dark[9] : theme.colors.gray[2]}
         overlayOpacity={0.55}
         overlayBlur={3}
         size="md">
-        <Detail/>
+        <Detail onClose={handleCloseModalClick}/>
       </Modal>
       <div className={styles.product_header}>
         <div className={styles.product_name}>

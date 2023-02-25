@@ -9,7 +9,7 @@ export const Button: FC<IButtonProps> = ({ counter, withCounter, variant, childr
   [styles.primary]: variant === "primary",
   [styles.secondary]: variant === "secondary",
   })} {...props}>
-    {withCounter && <div className={styles.counter}>5</div>}
+    {withCounter && <div className={styles.counter}>2</div>}
     {children}
   </button>
 );

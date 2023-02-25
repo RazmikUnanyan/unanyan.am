@@ -8,7 +8,10 @@ import { Button, Input, PageTitle, Shapes, Textarea } from "../../components";
 
 export const Contacts: FC<IContactsProps> = () => {
   return (
-    <motion.section className={styles.contacts_wrapper} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+    <motion.section className={styles.contacts_wrapper}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+    >
       <PageTitle>Контакты</PageTitle>
       <div className={styles.contacts}>
         <div className={styles.contacts_info}>
@@ -18,17 +21,17 @@ export const Contacts: FC<IContactsProps> = () => {
         <form action="" className={styles.contacts_form}>
           <div className={styles.contacts_form_group}>
             <div className={styles.contacts_form_input_wrapper}>
-              <Input type="text" placeholder="Введите ваш имя" />
+              <Input type="text" placeholder="Имя" />
             </div>
             <div className={styles.contacts_form_input_wrapper}>
-              <Input type="text" placeholder="Введите ваш email" />
+              <Input type="text" placeholder="Email" />
             </div>
           </div>
           <div className={styles.contacts_form_input_wrapper}>
             <Input type="text" placeholder="Тема" />
           </div>
           <div className={cn(styles.contacts_form_input_wrapper, styles.contacts_form_input_area)}>
-            <Textarea placeholder="Напишите ваш текст" name="" id="" rows={30} cols={10}></Textarea>
+            <Textarea placeholder="Текст" name="" id="" rows={30} cols={10}></Textarea>
           </div>
           <Button>Отправить</Button>
         </form>

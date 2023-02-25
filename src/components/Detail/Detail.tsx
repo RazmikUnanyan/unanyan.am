@@ -1,11 +1,11 @@
 import React, {FC} from 'react';
-import {Badge, Image} from "@mantine/core"
+import {Badge, Image, ActionIcon} from "@mantine/core"
 import {IDetailProps} from "./detail.props";
 import {Carousel} from "@mantine/carousel";
 import styles from "./detail.module.scss"
-import {Button} from "../_ui";
+import { Button} from "../_ui";
 
-export const Detail: FC<IDetailProps> = ({...props}) => {
+export const Detail: FC<IDetailProps> = ({onClose, ...props}) => {
     return (
         <div {...props} className={styles.detail}>
             <Carousel withControls={false} withIndicators slideGap="md" dragFree>
@@ -47,6 +47,9 @@ export const Detail: FC<IDetailProps> = ({...props}) => {
                 </div>
             </div>
             <div  className={styles.detail_footer}>
+                <ActionIcon onClick={onClose}>
+                    <i className="icon-close"/>
+                </ActionIcon>
                 <p className={styles.date}>25.03.2023</p>
             </div>
         </div>

@@ -1,7 +1,7 @@
 import { ActionIcon } from "@mantine/core";
 import cn from "classnames";
 import React, { FC, useState } from "react";
-import { NavLink } from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 
 import styles from "./sidebar.module.scss";
 import { ISidebarProps } from "./sidebar.props";
@@ -18,9 +18,9 @@ export const Sidebar: FC<ISidebarProps> = () => {
         className={cn(styles.aside, {
           [styles.aside_mobile_open]: openMenu,
         })}>
-        <a href="#" className={styles.logo}>
+        <Link to="/unanyan.am" className={styles.logo}>
           <img src={Logo} alt="logo" />
-        </a>
+        </Link>
 
         <nav className={styles.nav}>
           <div className={styles.nav_menu}>
