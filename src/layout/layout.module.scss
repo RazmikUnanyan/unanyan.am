@@ -15,6 +15,12 @@
   margin-left: 110px;
 }
 
+.basket {
+  position: fixed;
+  bottom: 0.5rem;
+  right: 1.875rem;
+  z-index: 10;
+}
 
 @media screen and (max-width: 1024px) {
   .main{

@@ -4,3 +4,5 @@ export * from "./PageTitle/PageTitle";
 export * from "./Shapes/Shapes";
 export * from "./Socials/Socials";
 export * from "./Languages/Languages";
+export * from "./Detail/Detail";
+export * from "./BasketStub/BasketStub"

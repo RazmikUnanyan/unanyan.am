@@ -25,19 +25,19 @@ export const Sidebar: FC<ISidebarProps> = () => {
         <nav className={styles.nav}>
           <div className={styles.nav_menu}>
             <ul className={styles.nav_list}>
-              <li className={styles.nav_item}>
+              <li className={styles.nav_item}  onClick={() => setOpenMenu((prev) => !prev)}>
                 <NavLink to="/unanyan.am" className={styles.nav_link} style={active}>
                   <i className="icon-home"></i>
                 </NavLink>
               </li>
 
-              <li className={styles.nav_item}>
+              <li className={styles.nav_item}  onClick={() => setOpenMenu((prev) => !prev)}>
                 <NavLink to="/product" className={styles.nav_link} style={active}>
                   <i className="icon-fire"></i>
                 </NavLink>
               </li>
 
-              <li className={styles.nav_item}>
+              <li className={styles.nav_item}  onClick={() => setOpenMenu((prev) => !prev)}>
                 <NavLink to="/contact" className={styles.nav_link} style={active}>
                   <i className="icon-envelope"></i>
                 </NavLink>

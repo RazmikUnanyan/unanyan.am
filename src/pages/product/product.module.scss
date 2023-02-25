@@ -71,8 +71,6 @@
   font-size: $fs-secondary;
   display: inline-block;
   padding: 0.19rem 0.625rem;
-  transform: translateY(-30px);
-  transition: 0.3s;
 }
 
 .product_title {
@@ -113,8 +111,7 @@
   opacity: 0.9;
 }
 
-.product_card:hover .product_title,
-.product_card:hover .product_category {
+.product_card:hover .product_title {
   opacity: 1;
   transform: translateY(0);
 }

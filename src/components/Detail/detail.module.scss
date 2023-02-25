@@ -1,0 +1,97 @@
+@use "../../styles/abstracts" as *;
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.875rem;
+}
+.seller {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: $box-radius;
+  box-shadow: $box-shadow;
+  position: relative;
+}
+
+.seller p {
+  color: $cl-title;
+}
+
+.contacts {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+
+.contacts span{
+  font-size: $fs-media;
+  color: $cl-fio;
+}
+
+.title {
+  position: absolute;
+  top: 0;
+  right: 1.5rem;
+  text-align: center;
+  font-size: $fs-primary;
+  color: white;
+  background-color: $cl-primary;
+  border-radius: 0  0 1rem  1rem;
+  padding: 0 9px;
+}
+.description {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: $box-radius;
+  box-shadow: $box-shadow;
+  position: relative;
+}
+.slide {
+  height: 200px;
+}
+
+.description_text {
+  font-size: $fs-media;
+  padding-top: 1rem;
+}
+
+.detail_footer {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.badge {
+  display: flex;
+  gap: 0.2rem
+}
+
+.date {
+  font-weight: $fw-primary;
+  color: $cl-date;
+  font-size: 0.7rem;
+}
+
+.basket_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+}
+@media screen and (max-width: 500px) {
+  .description_text {
+    font-size: 0.7rem;
+  }
+  .contacts span{
+    font-size: 0.7rem;
+    color: $cl-fio;
+  }
+}
+
