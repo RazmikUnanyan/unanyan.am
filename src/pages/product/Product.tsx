@@ -5,19 +5,19 @@ import React, { FC, useState } from "react";
 import styles from "./product.module.scss";
 import { IProductProps } from "./product.props";
 import {Button, Detail, Input, PageTitle} from "../../components";
+import {PRODUCT_MOCK} from "../../data";
+import {IProduct} from "../../interface";
 
-const products = [
-  { title: "Кобб 500 / Росс 308", id: 1, category: "Цыплята 1-3 дня", images: "https://kvedomosti.ru/wp-content/uploads/2016/12/Kak-kupit-tsyplyat-brojlerov.jpeg"},
-  { title: "Kобб 500", id: 2, category: "Яйцо кобб 500", images: "https://img.promportal.su/foto/good_fotos/465/4651720/prodayu-inkubacionnie-yayca-broylerov-kobb-500-i-ross-308_foto_largest.jpg"},
-  { title: "Бройлер", id: 3, category: "Двухнедельные цыплятая", images: "https://ferma.expert/wp-content/uploads/2018/06/boyler.jpg"},
-  { title: "Росс 308", id: 4, category: "Яйцо росс 308", images: "https://img.promportal.su/foto/good_fotos/465/4651720/prodayu-inkubacionnie-yayca-broylerov-kobb-500-i-ross-308_foto_largest.jpg"},
-  { title: "Росс 308 / Кобб 500", id: 5, category: "Мясо", images: "https://rassvetagro.ru/wp-content/uploads/2020/07/kurica-tushka.jpg"},
-]
 export const Product: FC<IProductProps> = () => {
   const [openModal, setOpenModal] = useState(false);
+  const [currentProduct, setCurrentProduct] = useState<IProduct>({});
+
   const theme = useMantineTheme();
 
-  const handleOpenModalClick = () => setOpenModal(true);
+  const handleOpenModalClick = (product: IProduct) => {
+    setCurrentProduct(product)
+    setOpenModal(true)
+  };
   const handleCloseModalClick = () => setOpenModal(false);
 
   const paginationStyle = {
@@ -41,7 +41,7 @@ export const Product: FC<IProductProps> = () => {
         overlayOpacity={0.55}
         overlayBlur={3}
         size="md">
-        <Detail onClose={handleCloseModalClick}/>
+        <Detail onClose={handleCloseModalClick} product={currentProduct}/>
       </Modal>
       <div className={styles.product_header}>
         <div className={styles.product_name}>
@@ -60,11 +60,11 @@ export const Product: FC<IProductProps> = () => {
         </div>
       </div>
       <div className={styles.product_grid}>
-        {products.map((product) => (
+        {PRODUCT_MOCK.map((product) => (
             <div className={styles.product_card} key={product.id}>
               <div className={styles.product_thumbnail}>
                 <Image
-                    src={product.images}
+                    src={product?.images?.main}
                     alt=""
                     className={styles.product_img}
                 />
@@ -72,7 +72,7 @@ export const Product: FC<IProductProps> = () => {
               </div>
               <span className={styles.product_category}>{product.category}</span>
               <h3 className={styles.product_title}>{product.title}</h3>
-              <a onClick={handleOpenModalClick} className={styles.product_button}>
+              <a onClick={() => handleOpenModalClick(product)} className={styles.product_button}>
                 <i className="icon-list" />
               </a>
             </div>
