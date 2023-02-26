@@ -2,7 +2,7 @@
 
 .basket_card {
   width: 100%;
-  height: 4rem;
+  height: 3rem;
   border-radius: 0.2rem;
   box-shadow: $box-shadow;
   overflow: hidden;
@@ -49,7 +49,7 @@
 .basket_delete {
   position: absolute;
   bottom: -6rem;
-  height: 2rem;
+  height: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,6 +68,6 @@
 
 
 .basket_card:hover {
-  height: 9rem;
+  height: 4rem;
 }
 
