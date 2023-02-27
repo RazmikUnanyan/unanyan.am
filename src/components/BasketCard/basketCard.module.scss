@@ -2,13 +2,19 @@
 
 .basket_card {
   width: 100%;
-  height: 3rem;
+  height: 1rem;
   border-radius: 0.2rem;
   box-shadow: $box-shadow;
   overflow: hidden;
   position: relative;
   display: flex;
+  color: black;
   transition: .3s;
+}
+
+.basket_card:hover {
+  height: 3rem;
+  color: white;
 }
 
 .basket_detail {
@@ -20,8 +26,8 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  opacity: 0.9;
   z-index: 3;
+  opacity: 0;
 }
 
 .title {
@@ -29,7 +35,6 @@
   top: 0.5rem;
   left: 0.5rem;
   z-index: 4;
-  color: white;
   font-size: $fs-media;
 }
 

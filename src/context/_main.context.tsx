@@ -4,6 +4,8 @@ import {IProduct} from "../interface";
 export interface IMainContext {
     basket: {[key:string]: { product: IProduct, counter: number } }
     setInBasket?: Dispatch<SetStateAction<{[key:string]: { product: IProduct, counter: number } }>>
+    openBasket?: boolean
+    setOpenBasket?: Dispatch<SetStateAction<boolean>>
 }
 
 export const MainContext = createContext<IMainContext>({
@@ -12,9 +14,9 @@ export const MainContext = createContext<IMainContext>({
 
 export const MainContextProvider = ({ children }: PropsWithChildren<IMainContext>): JSX.Element => {
     const [basket, setInBasket] = useState<{}>({})
-
+    const [openBasket, setOpenBasket] = useState(false)
     return (
-        <MainContext.Provider value={{ basket, setInBasket }}>
+        <MainContext.Provider value={{ openBasket, setOpenBasket, basket, setInBasket }}>
     {children}
     </MainContext.Provider>
 )

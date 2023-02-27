@@ -5,9 +5,10 @@ import {Carousel} from "@mantine/carousel";
 import styles from "./detail.module.scss"
 import { Button} from "../_ui";
 import {IMainContext, MainContext} from "../../context";
+import {showNotification} from "@mantine/notifications";
 
 export const Detail: FC<IDetailProps> = ({product, onClose, ...props}) => {
-    const {basket, setInBasket} = useContext<IMainContext>(MainContext)
+    const {basket, setInBasket, setOpenBasket} = useContext<IMainContext>(MainContext)
     const counter = basket[product.id || "0"]?.counter
 
     const handleSetProductInBasketClick = () => {
@@ -30,6 +31,18 @@ export const Detail: FC<IDetailProps> = ({product, onClose, ...props}) => {
                 }}
             })
         }
+        showNotification({
+            message: `Товар добавлен в корзину`,
+            autoClose: 1500,
+            onClick: () => {
+                onClose()
+                if (setOpenBasket) {
+                    setOpenBasket(true)
+                }
+            },
+            icon: <i className="icon-check"/>,
+            style: { cursor: "pointer" },
+        })
     }
 
     return (
