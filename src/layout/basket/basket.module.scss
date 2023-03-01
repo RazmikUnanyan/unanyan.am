@@ -22,7 +22,7 @@
 }
 
 .basket_footer {
-  margin: 2rem 0;
+  margin: 2rem 0 5rem;
   box-shadow: $box-shadow;
   border-radius: $box-radius;
   padding: 1rem;
@@ -38,7 +38,6 @@
   font-size: $fs-primary;
   width: 100%;
   list-style: initial;
-  margin-left: 0.5rem;
 }
 
 .basket_orders li {
@@ -47,7 +46,8 @@
   cursor: pointer;
   height: 1.7rem;
   transition: 0.3s;
-  color: $cl-fio;
+  color: $cl-title;
+  font-weight: $fw-primary;
 }
 
 .basket_delete {
@@ -98,6 +98,10 @@
 }
 
 
+.counter {
+  font-weight: normal;
+  font-size: $fs-primary;
+}
 .basket_orders li:hover .img {
   display: block;
 }

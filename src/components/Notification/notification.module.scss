@@ -6,6 +6,7 @@
   bottom: -3rem;
   height: 3rem;
   display: flex;
+  font-size: $fs-primary;
   align-items: center;
   color: white;
   font-weight: $fw-semiBold;
@@ -35,4 +36,10 @@
   text-decoration: underline;
   margin-left: 0.3rem;
   cursor: pointer;
+}
+
+@media screen and (max-width: 530px) {
+  .detail_notification {
+    font-size: $fs-media;
+  }
 }

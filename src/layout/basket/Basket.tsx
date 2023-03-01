@@ -20,7 +20,6 @@ export const Basket: FC<IBasketProps> = ({onClose, ...props}) => {
     }
     return (
         <Drawer
-            withCloseButton={false}
             onClose={onClose}
             position="right"
             overlayColor={theme.colors.gray[2]}
@@ -33,14 +32,13 @@ export const Basket: FC<IBasketProps> = ({onClose, ...props}) => {
             {!!basketItems.length && (
                 <div className={styles.basket_wrapper}>
                     <div className={styles.basket_orders}>
-                        <h3>Ваш заказ:</h3>
                         <ul className={styles.basket_orders}>
                             {basketItems.map((item, index) => (
                                 <li key={item.product.id}>
                                     <div className={styles.mask}/>
                                     {item.product.title}
                                     <span className={styles.counter}>
-                                , количество: {item.counter}
+                                : {item.counter} шт.
                                 </span>
                                     <span className={styles.basket_delete} onClick={() => handleDeleteItemClick(item.product.id)}>
                                         Удалить
@@ -55,7 +53,6 @@ export const Basket: FC<IBasketProps> = ({onClose, ...props}) => {
                             ))}
                         </ul>
                     </div>
-                    <Button variant="outline">Вернуться в магазин</Button>
                     <div className={styles.basket_footer}>
                         <h3 className={styles.basket_info}>
                             Наш менеджер свяжется с вами, чтобы уточнить актуальные цены и способ доставки.

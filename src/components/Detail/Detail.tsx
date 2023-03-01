@@ -48,7 +48,7 @@ export const Detail: FC<IDetailProps> = ({product, onClose, ...props}) => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsOpenNotification(false)
-        }, 3000);
+        }, 4000);
         return () => clearTimeout(timer);
     }, [isOpenNotification])
     return (

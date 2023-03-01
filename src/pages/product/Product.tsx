@@ -78,12 +78,12 @@ export const Product: FC<IProductProps> = () => {
             </div>
         ) )}
       </div>
-      <Pagination
-        className={styles.pagination}
-        size="xs"
-        styles={paginationStyle}
-        total={100}
-      />
+      {/*<Pagination*/}
+      {/*  className={styles.pagination}*/}
+      {/*  size="xs"*/}
+      {/*  styles={paginationStyle}*/}
+      {/*  total={100}*/}
+      {/*/>*/}
     </motion.section>
   );
 };
