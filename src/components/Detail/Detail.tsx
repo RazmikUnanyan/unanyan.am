@@ -1,17 +1,22 @@
-import React, {FC, useContext} from 'react';
+import React, {FC, useContext, useEffect, useState} from 'react';
 import {Badge, Image, ActionIcon} from "@mantine/core"
 import {IDetailProps} from "./detail.props";
 import {Carousel} from "@mantine/carousel";
 import styles from "./detail.module.scss"
 import { Button} from "../_ui";
 import {IMainContext, MainContext} from "../../context";
-import {showNotification} from "@mantine/notifications";
+import {Notification} from "../Notification/Notification";
 
 export const Detail: FC<IDetailProps> = ({product, onClose, ...props}) => {
+
     const {basket, setInBasket, setOpenBasket} = useContext<IMainContext>(MainContext)
+
+    const [isOpenNotification, setIsOpenNotification] = useState(false)
+
     const counter = basket[product.id || "0"]?.counter
 
     const handleSetProductInBasketClick = () => {
+        setIsOpenNotification(true)
         if (setInBasket) {
             setInBasket((prev: any) => {
                 if (product.id && prev[product.id]) {
@@ -31,20 +36,21 @@ export const Detail: FC<IDetailProps> = ({product, onClose, ...props}) => {
                 }}
             })
         }
-        showNotification({
-            message: `Товар добавлен в корзину`,
-            autoClose: 1500,
-            onClick: () => {
-                onClose()
-                if (setOpenBasket) {
-                    setOpenBasket(true)
-                }
-            },
-            icon: <i className="icon-check"/>,
-            style: { cursor: "pointer" },
-        })
     }
 
+    const handleOpenBasketClick = () => {
+        onClose()
+        if (setOpenBasket) {
+            setOpenBasket(true)
+        }
+    }
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsOpenNotification(false)
+        }, 3000);
+        return () => clearTimeout(timer);
+    }, [isOpenNotification])
     return (
         <div {...props} className={styles.detail}>
             <Carousel withControls={false} withIndicators slideGap="md" dragFree>
@@ -79,6 +85,7 @@ export const Detail: FC<IDetailProps> = ({product, onClose, ...props}) => {
                     <Button onClick={handleSetProductInBasketClick} variant="secondary" counter={counter}>
                         <i className="icon-basket"/>
                     </Button>
+                   <Notification onOpenBasketClick={handleOpenBasketClick} img={product.images?.main} isOpenNotification={isOpenNotification}/>
                 </div>
             </div>
             <div  className={styles.detail_footer}>

@@ -6,7 +6,6 @@ import {Sidebar} from "./sidebar/Sidebar";
 import {Button, Languages} from "../components";
 import {Basket} from "./basket/Basket";
 import {IMainContext, MainContext, MainContextProvider} from "../context";
-import {NotificationsProvider} from "@mantine/notifications";
 
 export const Layout: FC<ILayoutProps> = ({children, ...props}) => {
 
@@ -43,10 +42,8 @@ export const withLayout =
         (props: T) =>
             (
                 <MainContextProvider basket={{}}>
-                    <NotificationsProvider>
                         <Layout>
                             <Component {...props} />
                         </Layout>
-                    </NotificationsProvider>
                 </MainContextProvider>
             );

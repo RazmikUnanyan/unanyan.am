@@ -7,3 +7,4 @@ export * from "./Languages/Languages";
 export * from "./Detail/Detail";
 export * from "./BasketStub/BasketStub";
 export * from "./BasketCard/BasketCard";
+export * from "./Notification/Notification";

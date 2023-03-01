@@ -35,7 +35,7 @@
 }
 
 .basket_orders {
-  font-size: $fs-media;
+  font-size: $fs-primary;
   width: 100%;
   list-style: initial;
   margin-left: 0.5rem;
@@ -45,7 +45,7 @@
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  height: 1.2rem;
+  height: 1.7rem;
   transition: 0.3s;
   color: $cl-fio;
 }
@@ -81,7 +81,7 @@
   font-weight: $fw-semiBold;
   font-size: 0.7rem;
   width: 16rem;
-  height: 2.5rem;
+  height: 4rem;
   color: $cl-body;
   border-radius: 0.5rem;
   padding-left: 1rem;
