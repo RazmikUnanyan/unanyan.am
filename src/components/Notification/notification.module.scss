@@ -6,15 +6,17 @@
   bottom: -3rem;
   height: 3rem;
   display: flex;
-  font-size: $fs-primary;
+  justify-content: space-between;
+  font-size: $fs-media;
   align-items: center;
   color: white;
   font-weight: $fw-semiBold;
-  border-radius: 1rem 1rem 0 0;
+  border-radius: 0.5rem;
   width: 100%;
   background-color: $cl-secondary;
-  transition: 0.2s;
+  transition: 0.1s;
   overflow: hidden;
+  z-index: 4;
 }
 
 .open_notification {
@@ -24,7 +26,7 @@
 .detail_notification_img {
   position: absolute;
   left: 0;
-  z-index: 1;
+  z-index: 2;
 }
 
 .detail_notification_btn {
@@ -34,12 +36,19 @@
   color: $cl-text;
   font-weight: $fw-semiBold;
   text-decoration: underline;
-  margin-left: 0.3rem;
   cursor: pointer;
+}
+
+.notification {
+  display: flex;
+  width: 5rem;
+  align-items: center;
+  justify-content: space-between;
+  font-size: $fs-media;
 }
 
 @media screen and (max-width: 530px) {
   .detail_notification {
-    font-size: $fs-media;
+    font-size: 0.5rem;
   }
 }

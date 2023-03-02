@@ -1,7 +1,7 @@
 import { ActionIcon } from "@mantine/core";
 import cn from "classnames";
 import React, { FC, useState } from "react";
-import {Link, NavLink} from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import styles from "./sidebar.module.scss";
 import { ISidebarProps } from "./sidebar.props";
@@ -25,19 +25,19 @@ export const Sidebar: FC<ISidebarProps> = () => {
         <nav className={styles.nav}>
           <div className={styles.nav_menu}>
             <ul className={styles.nav_list}>
-              <li className={styles.nav_item}  onClick={() => setOpenMenu((prev) => !prev)}>
+              <li className={styles.nav_item} onClick={() => setOpenMenu((prev) => !prev)}>
                 <NavLink to="/unanyan.am" className={styles.nav_link} style={active}>
                   <i className="icon-home"></i>
                 </NavLink>
               </li>
 
-              <li className={styles.nav_item}  onClick={() => setOpenMenu((prev) => !prev)}>
+              <li className={styles.nav_item} onClick={() => setOpenMenu((prev) => !prev)}>
                 <NavLink to="/product" className={styles.nav_link} style={active}>
                   <i className="icon-fire"></i>
                 </NavLink>
               </li>
 
-              <li className={styles.nav_item}  onClick={() => setOpenMenu((prev) => !prev)}>
+              <li className={styles.nav_item} onClick={() => setOpenMenu((prev) => !prev)}>
                 <NavLink to="/contact" className={styles.nav_link} style={active}>
                   <i className="icon-envelope"></i>
                 </NavLink>

@@ -36,8 +36,9 @@
 
 .basket_orders {
   font-size: $fs-primary;
-  width: 100%;
-  list-style: initial;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.2rem;
 }
 
 .basket_orders li {

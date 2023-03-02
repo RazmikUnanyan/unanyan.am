@@ -8,10 +8,7 @@ import { Button, Input, PageTitle, Shapes, Textarea } from "../../components";
 
 export const Contacts: FC<IContactsProps> = () => {
   return (
-    <motion.section className={styles.contacts_wrapper}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-    >
+    <motion.section className={styles.contacts_wrapper} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
       <PageTitle>Контакты</PageTitle>
       <div className={styles.contacts}>
         <div className={styles.contacts_info}>
