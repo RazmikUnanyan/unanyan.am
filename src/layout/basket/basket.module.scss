@@ -34,7 +34,7 @@
   background-color: $cl-title;
   cursor: pointer;
   z-index: 12;
-  transition: 0.3s;
+  transition: .2s;
 }
 
 .button_wrapper_order {
@@ -50,7 +50,7 @@
   background-color: $cl-brown;
   position: absolute;
   bottom: -19rem;
-  transition: 0.3s;
+  transition: .2s;
   z-index: 4;
 }
 
@@ -89,7 +89,7 @@
   left: 0;
   background-color: $cl-primary;
   z-index: 12;
-  transition: .4s;
+  transition: .2s;
 }
 
 .basket_price_order {
