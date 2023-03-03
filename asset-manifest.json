@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/unanyan.am/static/css/main.41219d43.css",
+    "main.css": "/unanyan.am/static/css/main.fcf7e326.css",
     "main.js": "/unanyan.am/static/js/main.ccbb7048.js",
     "static/media/avatar.png": "/unanyan.am/static/media/avatar.cc5ea4091c26bcbbdb8b.png",
     "static/media/empty.svg": "/unanyan.am/static/media/empty.ccce02f392931aaeb0dc9f4a5d23cdaf.svg",
@@ -10,11 +10,11 @@
     "static/media/chicken2.svg": "/unanyan.am/static/media/chicken2.6162589031f2ced66a1b9df753d6c6b3.svg",
     "static/media/dots-bg.svg": "/unanyan.am/static/media/dots-bg.aa8289c51cd678b8cd47.svg",
     "index.html": "/unanyan.am/index.html",
-    "main.41219d43.css.map": "/unanyan.am/static/css/main.41219d43.css.map",
+    "main.fcf7e326.css.map": "/unanyan.am/static/css/main.fcf7e326.css.map",
     "main.ccbb7048.js.map": "/unanyan.am/static/js/main.ccbb7048.js.map"
   },
   "entrypoints": [
-    "static/css/main.41219d43.css",
+    "static/css/main.fcf7e326.css",
     "static/js/main.ccbb7048.js"
   ]
 }
