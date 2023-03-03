@@ -39,10 +39,11 @@
   overflow: hidden;
   border-radius: $box-radius;
   box-shadow: $box-shadow;
+  border: 1px solid $cl-brown;
 }
 
 .product_img {
-  height: 12rem;
+  height: 10rem;
   width: 100%;
   display: flex;
   align-items: center;

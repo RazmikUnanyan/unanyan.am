@@ -10,12 +10,12 @@ import { Button, Shapes, Socials } from "../../components";
 
 export const Home: FC<IHomeProps> = () => {
   const navigate = useNavigate();
-  const steps = ["яйцо 🐣", 1000, "цыплята 🐥", 1000, "мясо 🍗", 1000];
+  const steps = ["крылья 🐣", 1000, "грудка 🐥", 1000, "курица 🍗", 1000];
   return (
     <motion.section className={styles.home} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
       <div className={styles.intro}>
         <Avatar className={styles.home_img} />
-        <h1 className={styles.home_name}>Инкубационные яйца</h1>
+        <h1 className={styles.home_name}>Куриное мясо</h1>
         <span className={styles.education}>
           Продажа: <Typical steps={steps} loop={Infinity} wrapper="span" />
         </span>
