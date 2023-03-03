@@ -3,7 +3,7 @@ import React, { FC, useContext } from "react";
 
 import styles from "./basket.module.scss";
 import { IBasketProps } from "./basket.props";
-import { BasketCard, BasketStub, Button, Input } from "../../components";
+import {BasketCard, BasketStub, Button, Input, Shapes} from "../../components";
 import { IMainContext, MainContext } from "../../context";
 
 export const Basket: FC<IBasketProps> = ({ onClose, ...props }) => {
@@ -28,6 +28,7 @@ export const Basket: FC<IBasketProps> = ({ onClose, ...props }) => {
       overlayBlur={3}
       padding={15}
       {...props}>
+      <Shapes />
       {!basketItems.length && <BasketStub onClose={onClose} />}
       {!!basketItems.length && (
         <div className={styles.basket_wrapper}>
