@@ -10,7 +10,7 @@ import { IProduct } from "../../interface";
 
 export const Product: FC<IProductProps> = () => {
   const [openModal, setOpenModal] = useState(false);
-  const [currentProduct, setCurrentProduct] = useState<IProduct>({ id: 0 });
+  const [currentProduct, setCurrentProduct] = useState<IProduct>({ id: 0, price: 0 });
 
   const theme = useMantineTheme();
 

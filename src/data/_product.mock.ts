@@ -2,7 +2,8 @@ import { IProduct } from "../interface";
 
 export const PRODUCT_MOCK: IProduct[] = [
   {
-    title: "205 р. за 1 кг",
+    title: "Мясо на двух косточках.",
+    price: 150,
     id: 1,
     category: "Голень куриная",
     images: {
@@ -23,7 +24,8 @@ export const PRODUCT_MOCK: IProduct[] = [
     descriptions:"Это нежное и сочное мясо на двух косточках. Куриная голень без кожи считается диетическим продуктом."
   },
   {
-    title: "199 р. за 1 кг",
+    title: "Сочный вкус и нейтральный запах.",
+    price: 199,
     id: 2,
     category: "Окорочка куриные ",
     images: {
@@ -44,7 +46,8 @@ export const PRODUCT_MOCK: IProduct[] = [
   },
 
   {
-    title: "159 р. за 1 кг",
+    title: "Нежный сочный вкус.",
+    price: 300,
     id: 3,
     category: "Куриные крылья",
     images: {
@@ -65,7 +68,8 @@ export const PRODUCT_MOCK: IProduct[] = [
   },
 
   {
-    title: "269 р. за 1 кг",
+    title: "Нежная и сочная.",
+    price: 250,
     id: 4,
     category: "Грудка куриная без кожи",
     images: {
@@ -86,7 +90,8 @@ export const PRODUCT_MOCK: IProduct[] = [
       "Диетический продукт с минимальным содержанием жиров, подходит для детского питания. Мясо имеет светло-розовый цвет, при приготовлении становится белым."
   },
   {
-    title: "400 р. за 1 кг",
+    title: "Диетический продукт.",
+    price: 400,
     id: 5,
     category: "Курица домашняя",
     images: {

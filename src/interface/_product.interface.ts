@@ -11,6 +11,7 @@ export interface IProduct {
   descriptions?: string;
   tags?: string[];
   title?: string;
+  price: number;
   id: string | number;
   category?: string;
 }

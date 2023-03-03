@@ -1,15 +1,20 @@
-import { Drawer, ScrollArea, useMantineTheme } from "@mantine/core";
-import React, { FC, useContext } from "react";
+import {ActionIcon, Drawer, ScrollArea, useMantineTheme } from "@mantine/core";
+import React, {FC, useContext, useState} from "react";
+import cn from "classnames";
 
 import styles from "./basket.module.scss";
 import { IBasketProps } from "./basket.props";
 import {BasketCard, BasketStub, Button, Input, Shapes} from "../../components";
 import { IMainContext, MainContext } from "../../context";
+import {useNavigate} from "react-router-dom";
 
 export const Basket: FC<IBasketProps> = ({ onClose, ...props }) => {
   const { basket, setInBasket } = useContext<IMainContext>(MainContext);
   const theme = useMantineTheme();
   const basketItems = Object.values(basket);
+
+  const navigation = useNavigate()
+  const [openOrder, setOpenOrder] = useState(false)
 
   const handleDeleteItemClick = (id?: number | string) => {
     if (setInBasket) {
@@ -19,6 +24,7 @@ export const Basket: FC<IBasketProps> = ({ onClose, ...props }) => {
     }
   };
 
+  const totalPrice = basketItems.reduce((acc, currProduct) => acc + currProduct.product.price * currProduct.counter, 0)
   return (
     <Drawer
       onClose={onClose}
@@ -32,28 +38,40 @@ export const Basket: FC<IBasketProps> = ({ onClose, ...props }) => {
       {!basketItems.length && <BasketStub onClose={onClose} />}
       {!!basketItems.length && (
         <div className={styles.basket_wrapper}>
-          <ScrollArea h={250} className={styles.basket_orders}>
+          <ScrollArea h="75vh" className={styles.basket_orders}>
             {basketItems.map((item) => (
               <BasketCard key={item.product.id} product={item} onDeleteItemClick={handleDeleteItemClick} />
             ))}
+            <div className={cn(styles.basket_price, {
+              [styles.basket_price_order]: openOrder
+            })}>Итого: {totalPrice} ₽</div>
+            <div className={cn(styles.button_wrapper, {
+              [styles.button_wrapper_order]: openOrder
+            })} onClick={() => setOpenOrder((prev) => !prev)}>
+              {openOrder ? "Заказать" : "Продолжить"}
+            </div>
+            <div className={cn(styles.basket_footer, {
+              [styles.basket_footer_open]: openOrder
+            })}>
+              <ActionIcon onClick={() => setOpenOrder(false)} className={styles.close_order}><i className="icon-close"/></ActionIcon>
+              <h3 className={styles.basket_info}>
+                Наш менеджер свяжется с вами, чтобы уточнить актуальные цены и способ доставки.
+              </h3>
+              <div className={styles.input_wrapper}>
+                <Input placeholder="Name" />
+              </div>
+              <div className={styles.input_wrapper}>
+                <Input placeholder="Phone" />
+              </div>
+              <div className={styles.input_wrapper}>
+                <Input placeholder="Email" />
+              </div>
+            </div>
           </ScrollArea>
-          <div className={styles.basket_footer}>
-            <h3 className={styles.basket_info}>
-              Наш менеджер свяжется с вами, чтобы уточнить актуальные цены и способ доставки.
-            </h3>
-            <div className={styles.input_wrapper}>
-              <Input placeholder="Name" />
-            </div>
-            <div className={styles.input_wrapper}>
-              <Input placeholder="Phone" />
-            </div>
-            <div className={styles.input_wrapper}>
-              <Input placeholder="Email" />
-            </div>
-            <div className={styles.button_wrapper}>
-              <Button>Заказать</Button>
-            </div>
-          </div>
+          <Button variant="outline" onClick={() => {
+            navigation("/product")
+            onClose()
+          }}>Вернуться в магазин</Button>
         </div>
       )}
     </Drawer>

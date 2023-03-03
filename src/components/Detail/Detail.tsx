@@ -54,6 +54,7 @@ export const Detail: FC<IDetailProps> = ({ product, onClose, ...props }) => {
           </Carousel.Slide>
         ))}
       </Carousel>
+      <div className={styles.price_wrapper}><span className={styles.price}>{product.price} ₽</span> за 1 кг.</div>
       <div className={styles.seller}>
         <div className={styles.title}>Продавец</div>
         <h3>{product?.seller?.name}</h3>
@@ -66,7 +67,7 @@ export const Detail: FC<IDetailProps> = ({ product, onClose, ...props }) => {
       </div>
       <div className={styles.description}>
         <div className={styles.title}>Описание</div>
-        <h3>{product.title}</h3>
+        <h3>{product.category}</h3>
         <p className={styles.description_text}>{product.descriptions}</p>
         <div className={styles.basket_wrapper}>
           <div className={styles.badge}>

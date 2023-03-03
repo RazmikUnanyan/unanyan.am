@@ -39,7 +39,7 @@
   text-align: center;
   font-size: $fs-primary;
   color: white;
-  background-color: $cl-primary;
+  background-color: $cl-title;
   border-radius: 0  0 1rem  1rem;
   padding: 0 9px;
 }
@@ -71,6 +71,22 @@
 
 .name {
   color: $cl-primary;
+}
+
+.price_wrapper {
+  font-size: $fs-media;
+  position: absolute;
+  background: $cl-primary;
+  font-weight: $fw-bold;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0 1rem ;
+  top: 0;
+  left: 0;
+}
+
+.price {
+  margin: 0 0.2rem;
 }
 
 .badge {
