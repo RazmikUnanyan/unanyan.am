@@ -1,4 +1,4 @@
-import { Drawer, useMantineTheme } from "@mantine/core";
+import { Drawer, ScrollArea, useMantineTheme } from "@mantine/core";
 import React, { FC, useContext } from "react";
 
 import styles from "./basket.module.scss";
@@ -31,11 +31,11 @@ export const Basket: FC<IBasketProps> = ({ onClose, ...props }) => {
       {!basketItems.length && <BasketStub onClose={onClose} />}
       {!!basketItems.length && (
         <div className={styles.basket_wrapper}>
-          <div className={styles.basket_orders}>
-            {basketItems.map((item, index) => (
+          <ScrollArea h={250} className={styles.basket_orders}>
+            {basketItems.map((item) => (
               <BasketCard key={item.product.id} product={item} onDeleteItemClick={handleDeleteItemClick} />
             ))}
-          </div>
+          </ScrollArea>
           <div className={styles.basket_footer}>
             <h3 className={styles.basket_info}>
               Наш менеджер свяжется с вами, чтобы уточнить актуальные цены и способ доставки.
@@ -49,7 +49,9 @@ export const Basket: FC<IBasketProps> = ({ onClose, ...props }) => {
             <div className={styles.input_wrapper}>
               <Input placeholder="Email" />
             </div>
-            <Button>Заказать</Button>
+            <div className={styles.button_wrapper}>
+              <Button>Заказать</Button>
+            </div>
           </div>
         </div>
       )}

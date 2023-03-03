@@ -1,10 +1,11 @@
 @use "../../styles/abstracts" as * ;
 
 .basket_wrapper {
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 
 }
 .basket_card_wrapper {
@@ -21,16 +22,23 @@
   margin: 0.5rem 0;
 }
 
+.button_wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .basket_footer {
   margin: 2rem 0 5rem;
   box-shadow: $box-shadow;
   border-radius: $box-radius;
   padding: 1rem;
+  background-color: $cl-brown;
 }
 
 .basket_info {
   font-size: $fs-secondary;
-  color: $cl-date;
+  color: $cl-title;
   font-weight: $fw-primary;
 }
 
@@ -38,97 +46,5 @@
   font-size: $fs-primary;
   display: flex;
   flex-direction: column;
-  row-gap: 0.2rem;
-}
-
-.basket_orders li {
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  height: 1.7rem;
-  transition: 0.3s;
-  color: $cl-title;
-  font-weight: $fw-primary;
-}
-
-.basket_delete {
-  position: absolute;
-  bottom: -6rem;
-  height: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.2rem;
-  border-radius: 0.3rem 0.3rem 0 0;
-  font-size: 0.5rem;
-  font-weight: $fw-semiBold;
-  background-color: $cl-primary;
-  color: white;
-  z-index: 9;
-  transition: 0.5s;
-  cursor: pointer;
-}
-
-.mask {
-  display: none;
-  background-color: $cl-fio;
-  height: 100%;
-  position: absolute;
-  right: 0;
-  width: 100%;
-  z-index: -2;
-}
-.basket_orders li:hover {
-  font-weight: $fw-semiBold;
-  font-size: 0.7rem;
-  width: 16rem;
-  height: 4rem;
-  color: $cl-body;
-  border-radius: 0.5rem;
-  padding-left: 1rem;
-  display: flex;
-  justify-content: space-between;
-}
-
-.img {
-  display: none;
-  position: absolute;
-  right: 0;
-  z-index: -1;
-  opacity: 0.3;
-}
-
-
-.counter {
-  font-weight: normal;
-  font-size: $fs-primary;
-}
-.basket_orders li:hover .img {
-  display: block;
-}
-.basket_orders li:hover .mask  {
-  display: block;
-}
-
-.basket_orders li:hover .counter {
-  display: none;
-}
-
-.basket_orders li:hover .basket_delete {
-  bottom: 0;
-}
-
-.counter_active {
-  display: none;
-}
-.basket_orders li:hover .counter_active {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem;
-  width: 5rem;
-  height: 100%;
-  background-color: white;
-  color: $cl-title;
-  font-weight: $fw-semiBold;
+  row-gap: 0.4rem;
 }

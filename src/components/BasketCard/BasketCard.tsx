@@ -1,4 +1,4 @@
-import { ActionIcon, Image } from "@mantine/core";
+import { ActionIcon, Badge, Image } from "@mantine/core";
 import React, { FC, useContext } from "react";
 
 import styles from "./basketCard.module.scss";
@@ -42,28 +42,29 @@ export const BasketCard: FC<IBasketCardProps> = ({ onDeleteItemClick, product, .
 
   return (
     <div className={styles.basket_card} {...props}>
-      <div className={styles.mask} />
       <div className={styles.basket_detail}>
-        <Image src={product.product.images?.main} />
-        <h3 className={styles.title}>{product.product.title}</h3>
-        <span className={styles.basket_delete} onClick={() => onDeleteItemClick(product.product.id)}>
+        <div className={styles.basket_delete} onClick={handleDeleteItemClick}>
           Удалить
-        </span>
-      </div>
-      <div className={styles.basket_counter}>
-        {product.counter === 1 ? (
-          <ActionIcon onClick={handleDeleteItemClick}>
-            <i color="red" className="icon-close" />
-          </ActionIcon>
-        ) : (
-          <ActionIcon onClick={handleDecreaseClick}>
-            <i className="icon-minus" />
-          </ActionIcon>
-        )}
-        {product.counter}
-        <ActionIcon onClick={handleIncreaseClick}>
-          <i className="icon-plus" />
-        </ActionIcon>
+        </div>
+        <Image height="5rem" src={product.product.images?.main} />
+        <div className={styles.description}>
+          <h3 className={styles.title}>{product.product.title}</h3>
+          <div className={styles.basket_counter}>
+            {product.counter === 1 ? (
+              <ActionIcon onClick={handleDeleteItemClick}>
+                <i color="red" className="icon-close" />
+              </ActionIcon>
+            ) : (
+              <ActionIcon onClick={handleDecreaseClick}>
+                <i className="icon-minus" />
+              </ActionIcon>
+            )}
+            {product.counter}
+            <ActionIcon onClick={handleIncreaseClick}>
+              <i className="icon-plus" />
+            </ActionIcon>
+          </div>
+        </div>
       </div>
     </div>
   );
