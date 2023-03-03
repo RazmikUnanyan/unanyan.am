@@ -12,6 +12,7 @@ export const BasketStub = ({ onClose }: { onClose: () => void }) => {
       <EmptyIcon className={styles.basket_stub_icon} />
       Ваша корзина пуста
       <Button
+          variant="outline"
         onClick={() => {
           onClose();
           navigate("/product");
