@@ -2,11 +2,12 @@ import { Image, Modal, useMantineTheme } from "@mantine/core";
 import { motion } from "framer-motion";
 import React, { FC, useState } from "react";
 
-import styles from "./product.module.scss";
 import { IProductProps } from "./product.props";
 import { Button, Detail, Input, PageTitle } from "../../components";
 import { PRODUCT_MOCK } from "../../data";
 import { IProduct } from "../../interface";
+
+import styles from "./product.module.scss";
 
 export const Product: FC<IProductProps> = () => {
   const [openModal, setOpenModal] = useState(false);
