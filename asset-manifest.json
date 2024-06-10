@@ -1,19 +1,22 @@
 {
   "files": {
-    "main.css": "/unanyan.am/static/css/main.8a3ffe1d.css",
-    "main.js": "/unanyan.am/static/js/main.0b7f1a84.js",
-    "static/media/cleaning-service-bro.svg": "/unanyan.am/static/media/cleaning-service-bro.cac43438a92c29cf1cedd247c9f16541.svg",
+    "main.css": "/unanyan.am/static/css/main.736ba88b.css",
+    "main.js": "/unanyan.am/static/js/main.585b9ac7.js",
+    "static/media/cleaning service-amico.svg": "/unanyan.am/static/media/cleaning service-amico.dbd0e44ee349c0b92fee2fcec77910af.svg",
+    "static/media/gutter cleaning-pana.svg": "/unanyan.am/static/media/gutter cleaning-pana.e984ab20e8f39d3589b2961aa1458377.svg",
+    "static/media/Laundry and dry cleaning-pana.svg": "/unanyan.am/static/media/Laundry and dry cleaning-pana.3b69027001d8339bd373f21b61819f22.svg",
+    "static/media/cleaning service-rafiki (1).svg": "/unanyan.am/static/media/cleaning service-rafiki (1).9dce3abcf8f8ac6dfc340fee3532a1e1.svg",
     "static/media/empty.svg": "/unanyan.am/static/media/empty.ccce02f392931aaeb0dc9f4a5d23cdaf.svg",
     "static/media/cleaning-Q.svg": "/unanyan.am/static/media/cleaning-Q.5bddaac6b76ebc5b3de0ac046b5e264f.svg",
     "static/media/dots-bg.svg": "/unanyan.am/static/media/dots-bg.aa8289c51cd678b8cd47.svg",
     "static/media/bucket.svg": "/unanyan.am/static/media/bucket.ee8b46dab6c3c8ff56f99fd4350e715a.svg",
     "static/media/home.svg": "/unanyan.am/static/media/home.7b18d429f636aa7f672480b813ffc24e.svg",
     "index.html": "/unanyan.am/index.html",
-    "main.8a3ffe1d.css.map": "/unanyan.am/static/css/main.8a3ffe1d.css.map",
-    "main.0b7f1a84.js.map": "/unanyan.am/static/js/main.0b7f1a84.js.map"
+    "main.736ba88b.css.map": "/unanyan.am/static/css/main.736ba88b.css.map",
+    "main.585b9ac7.js.map": "/unanyan.am/static/js/main.585b9ac7.js.map"
   },
   "entrypoints": [
-    "static/css/main.8a3ffe1d.css",
-    "static/js/main.0b7f1a84.js"
+    "static/css/main.736ba88b.css",
+    "static/js/main.585b9ac7.js"
   ]
 }
