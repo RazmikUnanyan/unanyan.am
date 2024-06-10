@@ -5,7 +5,7 @@ import { Link, NavLink } from "react-router-dom";
 
 import styles from "./sidebar.module.scss";
 import { ISidebarProps } from "./sidebar.props";
-import Logo from "../../assets/avatar.png";
+import Logo from "../../assets/clearIcons/cleaning-Q.svg";
 
 export const Sidebar: FC<ISidebarProps> = () => {
   const [openMenu, setOpenMenu] = useState(false);

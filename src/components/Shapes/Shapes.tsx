@@ -1,9 +1,9 @@
 import React from "react";
 
 import styles from "./shapes.module.scss";
-import { ReactComponent as ChickenIcon2 } from "../../assets/shapes/chicken2.svg";
-import { ReactComponent as ChickenIcon3 } from "../../assets/shapes/chicken3.svg";
-import { ReactComponent as ChickenIcon4 } from "../../assets/shapes/chicken4.svg";
+import { ReactComponent as ChickenIcon2 } from "../../assets/clearIcons/home.svg";
+import { ReactComponent as ChickenIcon3 } from "../../assets/clearIcons/bucket.svg";
+import { ReactComponent as ChickenIcon4 } from "../../assets/clearIcons/cleaning-Q.svg";
 
 export const Shapes = () => (
   <div className={styles.shapes}>
@@ -17,15 +17,15 @@ export const Shapes = () => (
         fillRule="evenodd"
       />
     </svg>
-    <svg width="26" height="26" className={styles.s2} xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M13 3.3541L2.42705 24.5h21.1459L13 3.3541z"
-        stroke="#FF4C60"
-        strokeWidth="3"
-        fill="none"
-        fillRule="evenodd"
-      />
-    </svg>
+    {/*<svg width="26" height="26" className={styles.s2} xmlns="http://www.w3.org/2000/svg">*/}
+    {/*  <path*/}
+    {/*    d="M13 3.3541L2.42705 24.5h21.1459L13 3.3541z"*/}
+    {/*    stroke="#FF4C60"*/}
+    {/*    strokeWidth="3"*/}
+    {/*    fill="none"*/}
+    {/*    fillRule="evenodd"*/}
+    {/*  />*/}
+    {/*</svg>*/}
 
     <svg width="30" height="25" className={styles.s3} xmlns="http://www.w3.org/2000/svg">
       <path
