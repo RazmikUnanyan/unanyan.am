@@ -5,7 +5,7 @@ import Typical from "react-typical";
 
 import styles from "./home.module.scss";
 import { IHomeProps } from "./home.props";
-import { ReactComponent as Avatar } from "../../assets/cleaning-service-bro.svg";
+import { ReactComponent as Avatar } from "../../assets/cleaning service-amico.svg";
 import { Button, Shapes, Socials } from "../../components";
 
 export const Home: FC<IHomeProps> = () => {
