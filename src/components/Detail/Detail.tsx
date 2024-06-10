@@ -54,7 +54,7 @@ export const Detail: FC<IDetailProps> = ({ product, onClose, ...props }) => {
           </Carousel.Slide>
         ))}
       </Carousel>
-      <div className={styles.price_wrapper}><span className={styles.price}>{product.price} ₽</span> за 1 кг.</div>
+      <div className={styles.price_wrapper}><span className={styles.price}>{product.price} $</span></div>
       <div className={styles.seller}>
         <div className={styles.title}>Продавец</div>
         <h3>{product?.seller?.name}</h3>

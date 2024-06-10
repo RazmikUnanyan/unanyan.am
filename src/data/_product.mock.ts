@@ -1,18 +1,20 @@
 import { IProduct } from "../interface";
-
+import icon1  from '../assets/dataIcons/Laundry and dry cleaning-pana.svg'
+import icon2  from '../assets/dataIcons/gutter cleaning-pana.svg'
+import icon3  from '../assets/dataIcons/cleaning service-rafiki (1).svg'
 export const PRODUCT_MOCK: IProduct[] = [
   {
-    title: "Мясо на двух косточках.",
+    title: "Cleaning the roof.",
     price: 150,
     id: 1,
-    category: "Голень куриная",
+    category: "Roof",
     images: {
-      main: "https://myasnoiprivoz.ru/uploads/63fb156246609/middle/438dce953605d9f26d4cc18d4337134f_16_37.jpg",
+      main: icon2,
       all: [
-        "https://myasnoiprivoz.ru/uploads/63fb156246609/middle/438dce953605d9f26d4cc18d4337134f_16_37.jpg",
-        "https://ciplenok.com/content/uploads/images/cypljata-broylery-kobb-500.jpg",
-        "https://agrovektor.com/uploads/gallery/13671/product/510541-0.jpg",
-        "https://krasivosti.pro/uploads/posts/2021-12/1640259562_14-krasivosti-pro-p-tsiplyata-broileri-kobb-ptitsi-krasivo-fot-15.jpg",
+        "https://dlczb9lfz9r73.cloudfront.net/wp-content/uploads/2023/01/29194226/AdobeStock_394603682-scaled.jpeg",
+        "https://airtasker-seo-assets-prod.s3.amazonaws.com/en_AU/1628496616932_roof-cleaning.jpg",
+        "https://static.homeguide.com/assets/images/content/homeguide-soft-wash-roof-cleaning-asphalt-shingles_qfgtul.jpg",
+        "https://evanshomeimprovementoh.com/wp-content/uploads/2018/11/roof-cleaning-1080x675.jpeg",
       ],
     },
     seller: {
@@ -20,20 +22,20 @@ export const PRODUCT_MOCK: IProduct[] = [
       phone: "+9788828828",
       email: "razmik.unanyan@mail.ru",
     },
-    tags: ["мясо", "годень", "курица"],
+    tags: ["roof", "cleaning", "house"],
     descriptions:"Это нежное и сочное мясо на двух косточках. Куриная голень без кожи считается диетическим продуктом."
   },
   {
-    title: "Сочный вкус и нейтральный запах.",
+    title: "Cleaning clothes.",
     price: 199,
     id: 2,
-    category: "Окорочка куриные ",
+    category: "Clothes ",
     images: {
-      main: "https://myasnoiprivoz.ru/uploads/633453d239614/okorochka.webp",
+      main: icon1,
       all: [
-        "https://myasnoiprivoz.ru/uploads/633453d239614/okorochka.webp",
-        "https://files.cmlt.ru/getUserImage?id=24454336",
-        "https://44.img.avito.st/image/1/1.udFVw7a6FThjatc9K5XoqZFgEzzh4B365GARMOloFw.z8kQXOABHG6w015oDbmgtutUOMNQ0Ryf_QBxV3Uc6Cs",
+        "https://avatars.dzeninfra.ru/get-zen_doc/10074064/pub_649062e0d7291f01e9fbff33_64906316d7291f01e9fc74cf/scale_1200",
+        "https://ah.com.ua/wp-content/uploads/2020/02/chto-takoe-ximchistka2-1024x609.jpg",
+        "https://chistykof.ru/wp-content/uploads/2019/10/himchistka.jpg",
       ],
     },
     seller: {
@@ -41,21 +43,21 @@ export const PRODUCT_MOCK: IProduct[] = [
       phone: "+9788828828",
       email: "razmik.unanyan@mail.ru",
     },
-    tags: ["мясо", "окорочка", "курица"],
+    tags: ["clothes", "cleaning"],
     descriptions:"Считается наименее полезной частью курицы. Вкус куриного окорочка зависит от способа приготовления. Отваренный без специй куриный окорок имеет нежный сочный вкус и нейтральный запах."
   },
 
   {
-    title: "Нежный сочный вкус.",
+    title: "House cleaning.",
     price: 300,
     id: 3,
-    category: "Куриные крылья",
+    category: "House",
     images: {
-      main: "https://myasnoiprivoz.ru/uploads/63f3058473517/middle/3_31_11.jpg",
+      main: icon3,
       all: [
-        "https://myasnoiprivoz.ru/uploads/63f3058473517/middle/3_31_11.jpg",
-        "https://pro-kur.ru/wp-content/uploads/2021/03/cobb-500-broiler-16.jpg",
-        "https://avamarket.com.ua/image/cache/catalog/image/catalog/blog/boleznikrossa.webp",
+        "https://cleanhouse.com.ru/wp-content/uploads/2019/06/Himchistka-divana-himchistka-kovra-ot-spetsialistov-Clean-House_-e1560590337884.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6fj1Yt-YBlUmzV3CDIRdY1rJMNlu8dsg4TQ&s",
+        "https://baranovichi.by/wp-content/uploads/2023/11/73567547867856.jpg",
       ],
     },
     seller: {
@@ -63,52 +65,7 @@ export const PRODUCT_MOCK: IProduct[] = [
       phone: "+9788828828",
       email: "razmik.unanyan@mail.ru",
     },
-    tags: ["мясо", "окорочка", "курица"],
+    tags: ["house", "cleaning"],
     descriptions:"Это делают в месте, где плечевая кость соединяется с позвоночником. Крыло имеет три части: плечевая, локтевая часть и кисть. Отварные куриные крылышки нежные и сочные на вкус. Можно также их пожарить, сделав хрустящими, острыми и ароматными.",
-  },
-
-  {
-    title: "Нежная и сочная.",
-    price: 250,
-    id: 4,
-    category: "Грудка куриная без кожи",
-    images: {
-      main: "https://myasnoiprivoz.ru/uploads/63fb1d6060a4c/middle/shutterstock_283507391-scaled-1_50_50.jpg",
-      all: [
-        "https://myasnoiprivoz.ru/uploads/63fb1d6060a4c/middle/shutterstock_283507391-scaled-1_50_50.jpg",
-        "https://files.cmlt.ru/getUserImage?id=24454336",
-        "https://44.img.avito.st/image/1/1.udFVw7a6FThjatc9K5XoqZFgEzzh4B365GARMOloFw.z8kQXOABHG6w015oDbmgtutUOMNQ0Ryf_QBxV3Uc6Cs",
-      ],
-    },
-    seller: {
-      name: "Размик",
-      phone: "+9788828828",
-      email: "razmik.unanyan@mail.ru",
-    },
-    tags: ["мясо", "грудка", "курица"],
-    descriptions:
-      "Диетический продукт с минимальным содержанием жиров, подходит для детского питания. Мясо имеет светло-розовый цвет, при приготовлении становится белым."
-  },
-  {
-    title: "Диетический продукт.",
-    price: 400,
-    id: 5,
-    category: "Курица домашняя",
-    images: {
-      main: "https://rassvetagro.ru/wp-content/uploads/2020/07/kurica-tushka.jpg",
-      all: [
-        "https://rassvetagro.ru/wp-content/uploads/2020/07/kurica-tushka.jpg",
-        "https://nashe-vse.com/image/cache/000000582_tushka_tapaka-750x750.png",
-      ],
-    },
-    seller: {
-      name: "Размик",
-      phone: "+9788828828",
-      email: "razmik.unanyan@mail.ru",
-    },
-    tags: ["мясо", "кобб"],
-    descriptions:
-      "Кобб 500 — кросс бройлерного направления. Впервые вывели таких кур в Чехии, и в дальнейшем кроссы " +
-      "этой разновидности приобрели популярность в самых разных странах, в том числе на просторах СНГ.",
   },
 ];
