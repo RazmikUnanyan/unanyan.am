@@ -65,7 +65,7 @@ export const BasketCard: FC<IBasketCardProps> = ({ onDeleteItemClick, product, .
                 <i className="icon-plus" />
               </ActionIcon>
             </div>
-            <div className={styles.basket_price}>{product?.product?.price && product?.product?.price  * product.counter} ₽</div>
+            <div className={styles.basket_price}>{product?.product?.price && product?.product?.price  * product.counter} $</div>
           </div>
         </div>
       </div>

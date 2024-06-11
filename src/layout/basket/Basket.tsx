@@ -44,7 +44,7 @@ export const Basket: FC<IBasketProps> = ({ onClose, ...props }) => {
             ))}
             <div className={cn(styles.basket_price, {
               [styles.basket_price_order]: openOrder
-            })}>Итого: {totalPrice} ₽</div>
+            })}>Итого: {totalPrice} $</div>
             <div className={cn(styles.button_wrapper, {
               [styles.button_wrapper_order]: openOrder
             })} onClick={() => setOpenOrder((prev) => !prev)}>

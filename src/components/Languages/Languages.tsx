@@ -4,21 +4,21 @@ import React, { FC, ReactNode, useState } from "react";
 
 import styles from "./languages.module.scss";
 import { ILanguagesProps } from "./languages.props";
-import Eng from "../../assets/flugs/icons8-england-circular-48.png";
-import Arm from "../../assets/flugs/icons8-армения-48.png";
-import Rus from "../../assets/flugs/icons8-российская-федерация-48.png";
+import Eng from "../../assets/flugs/usa.png";
+import Spain from "../../assets/flugs/spain.png";
+import Rus from "../../assets/flugs/rus.png";
 
 export const Languages: FC<ILanguagesProps> = ({ ...props }) => {
   const [openSelectLg, setOpenSelectLg] = useState(false);
-  const [currLg, setCurrLg] = useState<"ru" | "am" | "en">("ru");
+  const [currLg, setCurrLg] = useState<"ru" | "sp" | "en">("en");
 
   const lgs: { [key: string]: ReactNode } = {
-    am: <Image src={Arm} />,
+    sp: <Image src={Spain} />,
     ru: <Image src={Rus} />,
     en: <Image src={Eng} />,
   };
 
-  const handleSelectedLg = (lg: "ru" | "am" | "en") => {
+  const handleSelectedLg = (lg: "ru" | "sp" | "en") => {
     setCurrLg(lg);
     setOpenSelectLg((prev) => !prev);
   };
@@ -34,9 +34,9 @@ export const Languages: FC<ILanguagesProps> = ({ ...props }) => {
         </ActionIcon>
       )}
       <ActionIcon onClick={() => setOpenSelectLg((prev) => !prev)}>{lgs[currLg]}</ActionIcon>
-      {currLg !== "am" && (
-        <ActionIcon onClick={() => handleSelectedLg("am")}>
-          <Image className={styles.lg} src={Arm} />
+      {currLg !== "sp" && (
+        <ActionIcon onClick={() => handleSelectedLg("sp")}>
+          <Image className={styles.lg} src={Spain} />
         </ActionIcon>
       )}
       {currLg !== "ru" && (
