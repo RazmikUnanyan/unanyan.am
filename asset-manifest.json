@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/unanyan.am/static/css/main.736ba88b.css",
-    "main.js": "/unanyan.am/static/js/main.585b9ac7.js",
+    "main.js": "/unanyan.am/static/js/main.f7622db8.js",
     "static/media/cleaning service-amico.svg": "/unanyan.am/static/media/cleaning service-amico.dbd0e44ee349c0b92fee2fcec77910af.svg",
     "static/media/gutter cleaning-pana.svg": "/unanyan.am/static/media/gutter cleaning-pana.e984ab20e8f39d3589b2961aa1458377.svg",
     "static/media/Laundry and dry cleaning-pana.svg": "/unanyan.am/static/media/Laundry and dry cleaning-pana.3b69027001d8339bd373f21b61819f22.svg",
@@ -13,10 +13,10 @@
     "static/media/home.svg": "/unanyan.am/static/media/home.7b18d429f636aa7f672480b813ffc24e.svg",
     "index.html": "/unanyan.am/index.html",
     "main.736ba88b.css.map": "/unanyan.am/static/css/main.736ba88b.css.map",
-    "main.585b9ac7.js.map": "/unanyan.am/static/js/main.585b9ac7.js.map"
+    "main.f7622db8.js.map": "/unanyan.am/static/js/main.f7622db8.js.map"
   },
   "entrypoints": [
     "static/css/main.736ba88b.css",
-    "static/js/main.585b9ac7.js"
+    "static/js/main.f7622db8.js"
   ]
 }
